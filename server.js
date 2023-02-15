@@ -9,3 +9,31 @@ const db = mysql.createConnection({
     password: process.env.DB_PASSWORD,
     database: 'employee_db'
 });
+
+db.connect((err) =>{
+    if (err) throw err;
+    employeePrompt();
+});
+
+const employeePrompt = () => {
+    inquirer.prompt([
+        {
+            type: "list",
+            name: "userChoices",
+            message: "What would you like to do?",
+            choice: [
+                "View all Departments",
+                "View all Roles",
+                "View all Employees",
+                "Add Department",
+                "Add Role",
+                "Add Employee",
+                "Exit"]
+        }
+    ])
+
+    .then((response) => {
+
+    })
+}
+    
