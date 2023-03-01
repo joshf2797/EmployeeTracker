@@ -1,11 +1,11 @@
-INSERT INTO department (department_name)
+INSERT INTO departments (department_name)
 VALUES ("Coach"),
        ("Player"),
        ("Training Staff"),
        ("Executive"),
        ("Owner");
 
-INSERT INTO role (title, salary, department_id)
+INSERT INTO roles (title, salary, department_id)
 VALUES  ("Head Coach", 5000000, 1),
         ("Assistant Coach" 750000, 1),
         ("Point Guard", 28000000, 2),
@@ -16,15 +16,17 @@ VALUES  ("Head Coach", 5000000, 1),
         ("Head Trainer", 500000, 3),
         ("Assistant Trainer", 150000, 3),
         ("General Manager", 5000000, 4),
-        ("Assistant GM", 1000000, 4),
         ("Owner", "N/A", 5);
 
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES  ("Monty", "Williams", 1, 4),
-        ("Kevin", "Young", 1, 1),
-        ("Chris", "Paul", 2, 1),
-        ("Devin", "Booker", 2, 1),
-        ("Deandre", "Ayton", 2, 1),
-        ("Kevin", "Durant", 2, 1),
-        ("Torrey", "Craig", 2, 1),
-        ("David", "Crewe", )
+INSERT INTO employees (id, first_name, last_name, role_id, manager_id)
+VALUES  (1, "Monty", "Williams", 1, 10),
+        (2, "Kevin", "Young", 2, 1),
+        (3, "Chris", "Paul", 3, 1),
+        (4, "Devin", "Booker", 4, 1),
+        (5, "Deandre", "Ayton", 5, 1),
+        (6, "Kevin", "Durant", 6, 1),
+        (7, "Torrey", "Craig", 7, 1),
+        (8, "David", "Crewe", 8, 10),
+        (9, "John", "Swift", 9, 8),
+        (10, "James", "Jones", 10, 11),
+        (11, "Mat", "Ishbia", 11, null);
